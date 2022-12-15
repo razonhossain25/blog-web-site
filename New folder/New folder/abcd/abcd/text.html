@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+	<title> textarea style</title>
+	<link rel="stylesheet" type="text/css" href="cdd challang 2.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+	<style>
+		textarea{
+				 resize:none;
+				 width:50%
+				 padding:20px 60px;
+				 box-sizing:border-box;
+				 margin:30px 40px;
+				 font-size:1.5rem;
+				 border:3px solid blue;
+				 background-color:green;
+				 color:red;
+				 }
+		select{width:10%;
+				padding:5px;
+				background-color:blue;
+				border-radius:5px;
+				}
+	
+		input,button{width:100px;
+			  padding:5px;
+			  border:2px solid pink;
+			  border-radius:10px; 
+			  color:red;
+			  }
+		#nav-manu{background-color:green;
+					height:50px;
+					width:60%;
+					margin:0 auto;
+					border:2px solid pink;
+					border-radius:10px; 
+					}
+		#nav-manu ul li{margin:0px 20px;
+						list-style-type:none;
+						float:left;}
+		#nav-manu ul li a{text-decoration:none;
+						  font-size:25px;
+						  font-weight:bold;
+						  color:red;}
+		#nav-manu ul li a:hover{text-decoration:underline;
+								color:black;
+								}
+		input[type="text"]{	width:200px;
+							padding:20px;
+							color:red;
+							margin:15px 30px;
+							border:2px solid black;
+							font-size:1.5rem;
+							transition:width o.5s ease in out;
+							cursor:pointer;
+							}
+		#search:hover{background-color:yellow;
+						width:50%;
+						color:red;
+						}
+		input#search::placeholder{color:hotpink;}				
+		table,th,td{border:1px solid green;
+					width:250px;
+					height:100px;}
+					
+				th{background:yellow;
+					font-size:1.5rem;
+					}
+		tr:last-child{background:red;}
+		
+		p::selection{background-color:green;
+					color:red;}
+				
+		.style::before,.style::after{content:'paragrap';
+						height:40px;
+						width:100%;
+						background:green;
+						display:inline-block;
+						text-align:center;
+						font-size:2rem;
+						color:red;
+						padding:5px;
+							}
+		.style p{font-style:italic;
+		 font-weight:bold;
+		 font-size:40px;
+		 background:yellow;
+		 color:hotpink;
+		 font-family: 'Allison', cursive; }	
+		 
+		.demo{background:green;
+				color:red;
+				padding:10px;
+				
+				}
+		.demo li{list-style-type:none;
+				 list-style-position:inside;
+				 font-size:2rem;
+				 font-weight:bold;
+				 width:30%;
+					}
+		
+					
+		.demo li::before{content:'\f058';	
+						font-family:'font awesome 5 free';
+						font-weight:bold;
+						display:inline-block;
+						margin:20px 5px;
+						color:hotpink;
+						}
+		.list{background-color:red;
+				color:green;
+				padding:10px 20px;
+				}	
+		.list li{list-style-type:none;				 
+				 list-style-position:inside;
+				 list-style-image:url("checked.png");
+				 font-size:1.5rem;
+				 font-weight:bold;				
+				 color:yellow;
+				 margin:50px;
+				 width:30%;
+				 }		
+	.div1{background-color:hotpink;			
+			float:left;}
+			
+	.div2{background-color:pink;
+			float:right;}	
+	
+	.div3{background:green;
+			clear:both;}
+			
+		.position{border:2px solid black;
+				  padding:10px;
+				  background:yellow;
+				  width:200px;
+				   height:200px;
+				  }
+		.div-position {border:2px solid green;
+				background-color:var(--primary-color);
+				padding:10px;
+				 width:200px;
+				 height:200px;			  
+			}
+		:root{
+				--primary-color:hotpink;
+				}
+		.nav-bar{background:blue;
+				 height:50px;
+				 text-align:right;
+				}
+		.nav-bar a {color:white;
+					font-size:2rem;				
+					text-decoration:none;
+					margin:20px;										
+		}
+	.nav-bar a:hover{border:1px solid red;}
+	
+	
+
+	
+	.flex-container{
+					display:grid;
+					grid-template-areas:
+					'header header header header header'
+					'main manu manu aside aside'
+					'main footer footer footer footer';
+					 }
+									
+		.div1{grid-area:header;}		
+		.div2{grid-area:main;}
+		.div3{grid-area:manu;}	
+		.div4{grid-area:aside;}
+		.div5{grid-area:footer;}	
+		
+	.flex-container > div{background:yellow;
+							font-size:1.5rem;
+							font-weight:bold;
+							color:red;
+							border:solid;
+							text-align:center;
+							margin:0px;
+							}
+	.shadow{text-align:center;
+			font-size:1.5rem;
+			color:white;
+			background:green;
+			width:150px;
+			text-shadow:7px 7px 5px black
+			}
+	.card{background:green;
+			margin:10px;
+			padding:10px;
+			box-sizing:border-box;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content:center;
+			transition:0.3s ease in out;
+			}
+	.card-body{width:300px;
+				border:1px solid black;
+				background-color:none;
+				box-shadow:5px 5px 5px black;
+				margin:10px;
+				}
+	.pro-img{width:100%;
+			 height:300px;
+			
+			}	
+	.card-hade{font-size:1.5rem;
+				font-weight:bold;
+				text-align:center;
+				background:red;
+				}
+	.card-ditels{text-align:justify;
+				 padding:5px;
+				 background:hotpink;
+				 text-transform:capitalize;
+				 word-spacing:5px;
+				 line-height:20px;
+				
+				}
+	.card-body:hover{box-shadow:10px 10px 10px white;}
+	
+	.btn-container{background:gray;
+					text-align:center;
+					padding:20px 0px;
+					font-size:0px;}
+		
+		.btn{padding:10px;
+				color:blue;
+				border:black;
+			  font-size:2rem;
+			  
+			 }
+
+  </style>	
+  
+</head>
+<body>
+
+<div class="style">
+	<p> Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Nam at lectus urna duis convallis convallis tellus id interdum. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Diam in arcu cursus euismod. Amet cursus sit amet dictum sit amet justo donec. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Quam elementum pulvinar etiam non. Non odio euismod lacinia at quis. Volutpat blandit aliquam etiam erat velit. Sem nulla pharetra diam sit.</p>
+
+        <p>Eu mi bibendum neque egestas congue quisque egestas diam. Justo laoreet sit amet cursus. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Volutpat diam ut venenatis tellus in metus. Lectus nulla at volutpat diam ut. Eros donec ac odio tempor orci dapibus ultrices in. Viverra mauris in aliquam sem fringilla ut morbi. Nibh nisl condimentum id venenatis a condimentum. Elit eget gravida cum sociis natoque penatibus et magnis. Eu non diam phasellus vestibulum lorem. Aliquam etiam erat velit scelerisque. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>
+</div>
+		<hr/>
+		
+		
+<select>
+	<option value="1">3.book</option>
+	<option value="2">4.pen</option>
+	<option value="3" selected>5.bool</option>
+	<option value="4">6.bet</option>
+	<option value="5">7.raber</option>
+
+</select><br>
+
+<label for="messag"></label>
+<textarea type="messag" cols="20" rows="15"> write your messag </textarea><br>
+
+<input type="submit" value="submit">
+<input type="reset" value="clear">
+
+<br><br>
+<div id="nav-manu">
+<ul>
+	<li><a href="#" >feedbook</a></li>
+	<li><a href="#" >about me</a></li>
+	<li><a href="#" >tutorial</a></li>
+	<li><a href="#" >video</a></li>
+</ul>
+</div>
+<br>
+<input type="text" name="search" id="search" placeholder="search">
+<input type="text" name="name" id="name" ">
+
+<table>
+	<tr>
+		<th>no</th>
+		<th>name</th>
+		<th>phone</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>rahul</td>
+		<td>017</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>rohit</td>
+		<td>0166</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>razon</td>
+		<td>0199</td>
+	</tr>
+</table>
+<br/>
+
+<div class="demo">	
+<ul>
+	<li> aaaa</li>
+	<li>bbbb</li>
+	<li> cccc</li>
+	<li>dddd</li>
+</ul>
+</div>
+<br>
+<div class="list">
+<ul>
+	<li>htmk</li>
+	<li>css</li>
+	<li>java</li>
+	<li>jqury</li>
+</ul>
+</div>
+<br>
+<div class="div1">
+	<h1> Bangladesh </h1>
+</div>
+<div class="div2">
+	<h1> Dubai </h1>
+</div>
+<div class="div3">
+	<p> Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Nam at lectus urna duis convallis convallis tellus id interdum. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Diam in arcu cursus euismod. Amet cursus sit amet dictum sit amet justo donec. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Quam elementum pulvinar etiam non. Non odio euismod lacinia at quis. Volutpat blandit aliquam etiam erat velit. Sem nulla pharetra diam sit.</p>
+</div>
+
+<div class="position">
+<p>Quam quisque id diam vel quam elementum pulvinar etiam non.</p>
+	
+</div>
+<div class="div-position">
+	 hellow elementum pulvinar etiam non
+	</div>
+<div class="nav-bar">
+
+<a href="#">home</a>
+<a href="#">about</a>
+<a href="#">login</a>
+<a href="#">video</a>
+</div>
+<br>
+<div class="flex-container">
+	<div class="div1">
+		<h1>header</h1>
+	</div>
+	<div class="div2">
+		<h1>main</h1>
+	</div>
+	<div class="div3">
+		<h1>manu</h1>
+	</div>
+	<div class="div4">
+		<h1>aside</h1>
+	</div>
+	<div class="div5">
+		<h1>footer</h1>
+	</div>
+</div>
+
+<h1 class="shadow"> bangladesh</h1>
+
+<div class="card">
+	<div class="card-body">
+		<img class="pro-img" src="angula.jpg">
+		<div class="card-hade">
+		come with me
+		</div>
+		<div class="card-ditels">
+		Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna
+		</div>
+	</div>
+	<div class="card-body">
+		<img class="pro-img" src="angula.jpg">
+		<div class="card-hade">
+		come with me
+		</div>
+		<div class="card-ditels">
+		Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna
+		</div>
+	</div>
+	<div class="card-body">
+		<img class="pro-img" src="angula.jpg">
+		<div class="card-hade">
+		come with me
+		</div>
+		<div class="card-ditels">
+		Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna
+		</div>
+	</div>
+	<div class="card-body">
+		<img class="pro-img" src="angula.jpg">
+		<div class="card-hade">
+		come with me
+		</div>
+		<div class="card-ditels">
+		Quam quisque id diam vel quam elementum pulvinar etiam non. Nunc mattis enim ut tellus elementum. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Leo in vitae turpis massa. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Eget aliquet nibh praesent tristique magna
+		</div>
+	</div>
+</div>
+
+<div class="btn-container">
+	<button class="btn"><i class="fab fa-facebook-square"></i></button>
+</div>
+</body>
+</html>
